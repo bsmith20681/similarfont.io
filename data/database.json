@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "fontName": "Futura",
+    "description": "",
+    "googleFont": false,
+    "googleAlternatives": ["Nunito Sans", "Didact Gothic", "Hind"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["test", "test"]
+  },
+  {
+    "id": 2,
+    "fontName": "Avenir",
+    "description": "",
+    "googleFont": false,
+    "googleAlternatives": ["Nunito Sans", "Lato"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["test", "test"]
+  },
+  {
+    "id": 3,
+    "fontName": "Gotham",
+    "description": "",
+    "googleFont": false,
+    "googleAlternatives": ["Raleway", "Montserrat", "Open Sans"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["test", "test"]
+  },
+  {
+    "id": 4,
+    "fontName": "Proxima Nova",
+    "description": "I am updating this",
+    "googleFont": false,
+    "googleAlternatives": ["Montserrat", "Nunito Sans", "Muli"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["test", "test"]
+  },
+  {
+    "id": 5,
+    "fontName": "Helvetica Neue",
+    "description": "",
+    "googleFont": false,
+    "googleAlternatives": ["IBM Plex Sans", "Roboto", "Open Sans"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["test", "test"]
+  }
+]
