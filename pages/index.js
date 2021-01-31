@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import LinkBox from "../components/LinkBox";
 import styles from "../styles/Home.module.css";
 import DataBase from "../data/database.json";
 
@@ -14,15 +15,22 @@ const Home = () => {
         </Head>
 
         <h1>Welcome to similarfont.io</h1>
-        {DataBase.map((font, index) => {
-          return (
-            <h1>
-              <Link href={`/google-alternative-font-to-${font.fontName}`}>
-                {font.fontName}
-              </Link>
-            </h1>
-          );
-        })}
+        <div className="container">
+          <div className="row">
+            {DataBase.map((font, index) => {
+              return (
+                <LinkBox
+                  link={`/google-alternative-font-to-${font.fontName}`}
+                  font={font.fontName}
+                  number={
+                    font.googleAlternatives.length +
+                    font.fontSquirrelAlternatives.length
+                  }
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     </Layout>
   );

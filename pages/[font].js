@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
+import ReactHtmlParser from "react-html-parser";
 import { useState, useEffect, useLayoutEffect } from "react";
 import DataBase from "../data/database.json";
 
@@ -16,10 +17,24 @@ const ViewFont = () => {
           {test.map((x, i) => {
             return (
               <div>
-                <h1>{x.fontName}</h1>
-                <h2>{x.description}</h2>
+                <h1>
+                  {x.googleAlternatives.length} Google Font Alternatives to{" "}
+                  {x.fontName}
+                </h1>
+                <h2>{ReactHtmlParser(x.longDescription)}</h2>
                 <h2>Here are some google alternative fonts for {x.fontName}</h2>
                 {x.googleAlternatives.map((font) => {
+                  return (
+                    <ul>
+                      <li>{font}</li>
+                    </ul>
+                  );
+                })}
+                <h2>
+                  Here are some free font alternatives from Font Squireel for{" "}
+                  {x.fontName}
+                </h2>
+                {x.fontSquirrelAlternatives.map((font) => {
                   return (
                     <ul>
                       <li>{font}</li>
