@@ -9,7 +9,7 @@ const LinkBox = (props) => {
           <div className="LinkBox">
             <h2>{props.font}</h2>
             <p>
-              {props.number} free similar fonts to {props.font}
+              {props.number} free fonts similar to {props.font}
             </p>
             <p>See Alternatives</p>
           </div>
