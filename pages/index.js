@@ -29,12 +29,7 @@ const Home = () => {
 
         <h1>Welcome to similarfont.io</h1>
         <div className="container">
-          <input
-            type="text"
-            placeholder="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <SearchBar value={search} change={(e) => setSearch(e.target.value)} />
           <div className="row">
             {filteredFontArray.map((font, index) => {
               return (

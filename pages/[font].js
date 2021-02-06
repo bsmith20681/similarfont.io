@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import { useRouter } from "next/router";
 import ReactHtmlParser from "react-html-parser";
 import Image from "next/image";
-import { useState, useEffect, useLayoutEffect } from "react";
 import DataBase from "../data/database.json";
 
 const ViewFont = () => {
