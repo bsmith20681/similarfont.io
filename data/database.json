@@ -11,7 +11,7 @@
     "googleFont": false,
     "googleAlternatives": ["Nunito Sans", "Didact Gothic", "Hind"],
     "fontSquirrel": false,
-    "fontSquirrelAlternatives": ["Overpass", "test"]
+    "fontSquirrelAlternatives": ["Overpass", "Glacial Indifference"]
   },
   {
     "id": 2,
@@ -86,15 +86,57 @@
   {
     "id": 7,
     "fontName": "Avenir",
-    "description": "<p>Futura was designed in 1927 by Paul Renner. It has a clean geometric appearance .  It is used in ads by famous companies such as Supreme, Volkswagen, and HP. Futura is used to represent modern, and clean elegance. It works great for both title and paragraph text.</p><p>There are many variations of the original font which include Futura next, Futura PT, and Futura Futuris. This additional variations can provide some uniqueness to your design. However, you cannot go wrong with the original.</p>",
-    "fontLink": "https://www.fonts.com/font/linotype/futura",
-    "fontImage": "/images/fontImages/futura.jpg",
-    "fontImageAlt": "Image fo Futura font",
+    "description": "<p>Avenir is a sans-serif font made in 1987 by Adrian Frutiger. It comes with minor details such as a two story 'a' and a curl at the end of the 't'. The font originally started with only 3 font weights. Later, 3 more were added for a total of 6.</p><p>This font can be used for headlines, display type, and even body type. It is described as stylistic, but also versatile. It provides nice design features while still being neutral enough to read.</p><p>Later, in 2004, Frutiger created a new edition called Avenir Next. This was new rendition to this the Avenir font to fit more modern digital displays.</p>",
+    "fontLink": "https://www.fonts.com/font/linotype/avenir",
+    "fontImage": "/images/fontImages/avenir.jpg",
+    "fontImageAlt": "Image of Avenir font",
     "serif": false,
-    "tags": ["fun", "sans-serif"],
+    "tags": ["sans-serif"],
     "googleFont": false,
-    "googleAlternatives": ["Nunito Sans", "Didact Gothic", "Hind"],
+    "googleAlternatives": ["Nunito Sans", "Lato"],
     "fontSquirrel": false,
-    "fontSquirrelAlternatives": ["Overpass", "test"]
+    "fontSquirrelAlternatives": ["Quattrocento Sans", "Latina Essential"]
+  },
+  {
+    "id": 7,
+    "fontName": "Lato",
+    "description": "<p>Lato is a sans serif font created in 2010 by Lukasz Dziedzic. This font can be used for both paragraph body type as well as for titles and headlines. Each letter uses a classic proportion which is easily visible in it's uppercase letters. Lato was designed to be classic, serious, but still friendly.  </p>",
+    "fontLink": "https://fonts.google.com/specimen/Lato?query=lato&preview.text_type=custom",
+    "fontImage": "/images/fontImages/lato.jpg",
+    "fontImageAlt": "Image of lato font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": true,
+    "googleAlternatives": [],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 8,
+    "fontName": "Quattrocento Sans",
+    "description": "<p>Quattrocento Sans is a great alternative for most paid sans serif fonts. It is classic, elegant, and warm. It is readable, but not overbearing. It makes a paragraph body font due it's large x-height. </p>",
+    "fontLink": "https://www.fontsquirrel.com/fonts/quattrocento-sans?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=quattrocentosans",
+    "fontImage": "/images/fontImages/quattrocento_sans.jpg",
+    "fontImageAlt": "Image of Quattrocento Sans",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": [],
+    "fontSquirrel": true,
+    "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 9,
+    "fontName": "Latina Essential",
+    "description": "<p>Latina Essential is designed for body text. It can be used well for blogs, books, magazines, and another other publishing designs. It comes in 4 weights with matching italics. </p>",
+    "fontLink": "https://www.fontsquirrel.com/fonts/latina-essential?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=latinaessential",
+    "fontImage": "/images/fontImages/latina_essential.jpg",
+    "fontImageAlt": "Image of Latina Essential",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": [],
+    "fontSquirrel": true,
+    "fontSquirrelAlternatives": []
   }
 ]
