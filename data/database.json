@@ -236,5 +236,61 @@
     "googleAlternatives": [],
     "fontSquirrel": true,
     "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 17,
+    "fontName": "Helvetica Neue",
+    "description": "<p>Helvetica Neue is a redesign of it's older brother Helvetica. This font was designed to be bold, approachable, and easy to read. This makes it great for both web and print.  It has 51 different font weights and is used in multiple languages. </p>",
+    "fontLink": "https://www.fonts.com/font/linotype/neue-helvetica?QueryFontType=Web&src=GoogleWebFonts",
+    "fontImage": "/images/fontImages/helvetica_neue.jpg",
+    "fontImageAlt": "Image of helvetica neue font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": ["IBM Plex Sans", "Open Sans", "Roboto"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["Lunchtype"]
+  },
+  {
+    "id": 17,
+    "fontName": "Roboto",
+    "description": "<p>Roboto is a great sans-serif font that can be used for both body paragraph text and headline text. It's letters are largely geometric and easy to read. The open curves make this font fun and friendly, while still be legible. </p>",
+    "fontLink": "https://fonts.google.com/specimen/Roboto?query=roboto&preview.text_type=custom",
+    "fontImage": "/images/fontImages/roboto.jpg",
+    "fontImageAlt": "Image of roboto font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": true,
+    "googleAlternatives": [],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 18,
+    "fontName": "IBM Plex Sans",
+    "description": "<p>IBM Plex Sans is a sans-serif font designed and used by the company IBM. It was designed to help bridge the gap between human and machine. It makes a great font for web, print, and mobile interfaces. This font is used primary for body text, but also has a serif brother that is great for headlines.</p>",
+    "fontLink": "https://fonts.google.com/specimen/IBM+Plex+Sans?query=ibm+pl&preview.text_type=custom",
+    "fontImage": "/images/fontImages/ibm_plex_sans.jpg",
+    "fontImageAlt": "Image of ibm plex sans font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": true,
+    "googleAlternatives": [],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 19,
+    "fontName": "Lunchtype",
+    "description": "<p>Lunchtype is a simple sans-serif font used for display and paragraph text.</p>",
+    "fontLink": "https://www.fontsquirrel.com/fonts/lunchtype?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=lunchtype",
+    "fontImage": "/images/fontImages/lunchtype.jpg",
+    "fontImageAlt": "Image of lunchtype",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": [],
+    "fontSquirrel": true,
+    "fontSquirrelAlternatives": []
   }
 ]
