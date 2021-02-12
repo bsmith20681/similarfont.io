@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const Header = (props) => {
@@ -25,8 +23,17 @@ const Header = (props) => {
           </li>
         </ul>
       </nav>
+      {/*Mobile Menu Utilities*/}
       <div id="hamburger" onClick={toggleMenu}>
         <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div
+        id="close-menu"
+        className={mobileMenu ? "open" : ""}
+        onClick={toggleMenu}
+      >
         <div></div>
         <div></div>
       </div>
