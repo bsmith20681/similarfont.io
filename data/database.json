@@ -899,5 +899,61 @@
     "googleAlternatives": ["Lato", "Open Sans", "Source Sans Pro", "PT Sans"],
     "fontSquirrel": false,
     "fontSquirrelAlternatives": ["Lunchtype", "Barlow"]
+  },
+  {
+    "id": 62,
+    "fontName": "Sofia Pro",
+    "description": "<p>Sofia Pro is a sans-serif font that was created in 2009. It has rounded curves and open terminals. It is elegant, friendly, and modern. What makes this font so unique is the higher x-height. This makes is a great font where any small text will be used. It would work well for mobile apps and any small print. </p>",
+    "fontLink": "https://www.myfonts.com/fonts/mostardesign/sofia-pro/",
+    "fontImage": "/images/fontImages/sofia_pro.jpg",
+    "fontImageAlt": "Image of sofia pro font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": ["Poppins", "Nunito Sans"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["Khula"]
+  },
+  {
+    "id": 63,
+    "fontName": "Poppins",
+    "description": "<p>Poppins is a great boldish sans-serif font used by many. Many of it's letters are monolinear with distinct stroke joints. It works great for either body paragraph font or headlines. </p>",
+    "fontLink": "https://fonts.google.com/specimen/Poppins?query=popp&preview.text_type=custom",
+    "fontImage": "/images/fontImages/poppins.jpg",
+    "fontImageAlt": "Image of poppins font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": true,
+    "googleAlternatives": [],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": []
+  },
+  {
+    "id": 64,
+    "fontName": "Cera Pro",
+    "description": "<p>Cera Pro is a sans-serif font that is popular in web design. It features a large x-height and compact capitals that give it a distinct look. The font supports up to 150 languages which include Latin, Cyrillic, and Greek. </p>",
+    "fontLink": "https://www.myfonts.com/fonts/typemates/cera/",
+    "fontImage": "/images/fontImages/sofia_pro.jpg",
+    "fontImageAlt": "Image of cera pro font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": false,
+    "googleAlternatives": ["PT Sans", "Signika"],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": ["Lunchtype", "Sinkin Sans"]
+  },
+  {
+    "id": 65,
+    "fontName": "Signika",
+    "description": "<p>Signika is a sans-serif font popular for signage. It features a gentle character and tall x-height. This helps it to be seen on any sign or other media. </p>",
+    "fontLink": "https://fonts.google.com/specimen/Signika?preview.text_type=custom&preview.text=The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog&query=signika",
+    "fontImage": "/images/fontImages/signika.jpg",
+    "fontImageAlt": "Image of Signika font",
+    "serif": false,
+    "tags": ["sans-serif"],
+    "googleFont": true,
+    "googleAlternatives": [],
+    "fontSquirrel": false,
+    "fontSquirrelAlternatives": []
   }
 ]
