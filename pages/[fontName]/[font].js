@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { useRouter } from "next/router";
 import ReactHtmlParser from "react-html-parser";
 import Image from "next/image";
-import DataBase from "../data/database.json";
+import DataBase from "../../data/database.json";
 
 const ViewFont = () => {
   const router = useRouter();

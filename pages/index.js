@@ -34,7 +34,7 @@ const Home = () => {
             {filteredFontArray.map((font, index) => {
               return (
                 <LinkBox
-                  link={`/google-alternative-font-to-${font.fontName}`}
+                  link={`/${font.fontName}/google-alternative-font-to-${font.fontName}`}
                   font={font.fontName}
                   number={
                     font.googleAlternatives.length +
