@@ -1,6 +1,7 @@
 const SearchBar = (props) => {
   return (
     <input
+      className="searchBar"
       type="text"
       placeholder="search"
       value={props.search}

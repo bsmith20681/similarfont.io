@@ -36,7 +36,7 @@ const ViewFont = () => {
 
                     return (
                       <ul>
-                        <li>
+                        <li key={googleAltFont.id}>
                           <img
                             src={googleAltFont.fontImage}
                             alt={googleAltFont.fontImageAlt}
@@ -59,7 +59,7 @@ const ViewFont = () => {
                     );
                     return (
                       <ul>
-                        <li>
+                        <li key={fontSquirrelAltFont.id}>
                           <img
                             src={fontSquirrelAltFont.fontImage}
                             alt={fontSquirrelAltFont.fontImageAlt}

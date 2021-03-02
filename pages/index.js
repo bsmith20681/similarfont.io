@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import LinkBox from "../components/LinkBox";
@@ -20,16 +20,28 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className={styles.container}>
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <NextSeo
+        title="Home | similarfont.io"
+        description="This is the homepage"
+      />
+      <div>
         {console.log(filteredFontArray)}
-
-        <h1>Welcome to similarfont.io</h1>
         <div className="container">
-          <SearchBar value={search} change={(e) => setSearch(e.target.value)} />
+          <div className="row justify-content-center">
+            <h1>Welcome to similarfont.io</h1>
+          </div>
+        </div>
+
+        <div className="container">
+          <div
+            className="row justify-content-center"
+            style={{ marginBottom: "48px" }}
+          >
+            <SearchBar
+              value={search}
+              change={(e) => setSearch(e.target.value)}
+            />
+          </div>
           <div className="row">
             {filteredFontArray.map((font, index) => {
               return (

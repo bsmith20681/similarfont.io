@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import "../styles/grid.css";
 import "../styles/LinkBox.css";
 import "../styles/header.css";
+import "../styles/footer.css";
+import "../styles/searchBar.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

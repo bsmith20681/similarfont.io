@@ -1,0 +1,14 @@
+.searchBar {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.5rem;
+}
+
+.searchBar::placeholder {
+  font-size: 1.5rem;
+  padding: 8px;
+}
