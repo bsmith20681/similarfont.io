@@ -40,7 +40,7 @@ const Home = () => {
       <div className="linkBox-content">
         <SearchBar value={search} change={(e) => setSearch(e.target.value)} />
 
-        <div className="container" style={{ minHeight: "50%" }}>
+        <div className="container" style={{ minHeight: "83vh" }}>
           <div
             className="row justify-content-center"
             style={{ marginBottom: "48px" }}
