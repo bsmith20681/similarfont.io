@@ -1,9 +1,8 @@
 import { NextSeo } from "next-seo";
-import Link from "next/link";
+import Message from "../components/Message";
 import Layout from "../components/Layout";
 import LinkBox from "../components/LinkBox";
 import SearchBar from "../components/SearchBar";
-import styles from "../styles/Home.module.css";
 import DataBase from "../data/database.json";
 import { useState } from "react";
 
@@ -24,37 +23,46 @@ const Home = () => {
         title="Home | similarfont.io"
         description="This is the homepage"
       />
-      <div>
-        {console.log(filteredFontArray)}
-        <div className="container">
-          <div className="row justify-content-center">
-            <h1>Welcome to similarfont.io</h1>
+
+      {console.log(filteredFontArray)}
+      <div className="container">
+        <div className="row justify-content-center">
+          <div>
+            <h1 className="hero-title">
+              Easily Find <span style={{ color: "#7069fa" }}>Free</span>{" "}
+              Alternatives to Premium Fonts
+            </h1>
+            <p className="hero-subtitle">Find up to 50+ alternative fonts</p>
           </div>
         </div>
+      </div>
 
-        <div className="container">
+      <div className="linkBox-content">
+        <SearchBar value={search} change={(e) => setSearch(e.target.value)} />
+
+        <div className="container" style={{ minHeight: "50%" }}>
           <div
             className="row justify-content-center"
             style={{ marginBottom: "48px" }}
-          >
-            <SearchBar
-              value={search}
-              change={(e) => setSearch(e.target.value)}
-            />
-          </div>
+          ></div>
           <div className="row">
-            {filteredFontArray.map((font, index) => {
-              return (
-                <LinkBox
-                  link={`/${font.fontName}/google-alternative-font-to-${font.fontName}`}
-                  font={font.fontName}
-                  number={
-                    font.googleAlternatives.length +
-                    font.fontSquirrelAlternatives.length
-                  }
-                />
-              );
-            })}
+            {}
+            {filteredFontArray.length === 0 ? (
+              <Message />
+            ) : (
+              filteredFontArray.map((font, index) => {
+                return (
+                  <LinkBox
+                    link={`/${font.fontName}/google-alternative-font-to-${font.fontName}`}
+                    font={font.fontName}
+                    number={
+                      font.googleAlternatives.length +
+                      font.fontSquirrelAlternatives.length
+                    }
+                  />
+                );
+              })
+            )}
           </div>
         </div>
       </div>

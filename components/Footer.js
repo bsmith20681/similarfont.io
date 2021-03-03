@@ -3,9 +3,8 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
-        <div className="row justify-content-center">
-          Copyright {year}. All rights reserved.
-        </div>
+        <div className="footer-line"></div>
+        <div className="row">© {year}. All rights reserved.</div>
       </div>
     </div>
   );
