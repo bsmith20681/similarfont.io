@@ -1,0 +1,12 @@
+.message {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.message-form {
+  width: fit-content;
+  margin: 0 auto;
+}

@@ -11,8 +11,10 @@ const LinkBox = (props) => {
       <Link href={props.link} key={shortid.generate()}>
         <a key={shortid.generate()}>
           {" "}
-          <div className="LinkBox" key={shortid.generate()}>
-            <h2 key={shortid.generate()}>{props.font}</h2>
+          <div className="linkBox" key={shortid.generate()}>
+            <h2 className="linkBox-title" key={shortid.generate()}>
+              {props.font}
+            </h2>
             <p key={shortid.generate()}>
               {props.number} free fonts similar to {props.font}
             </p>

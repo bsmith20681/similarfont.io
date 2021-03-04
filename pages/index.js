@@ -48,7 +48,7 @@ const Home = () => {
           <div className="row">
             {}
             {filteredFontArray.length === 0 ? (
-              <Message />
+              <Message message="😨Can't find the font you are looking for? Send it to us and we will put in our database later." />
             ) : (
               filteredFontArray.map((font, index) => {
                 return (

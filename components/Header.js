@@ -25,7 +25,7 @@ const Header = (props) => {
               <a href="">About Us</a>
             </li>
             <li className="nav-link">
-              <a href="">Contact Us</a>
+              <Link href="/submit-font">Submit a Font</Link>
             </li>
           </ul>
         </nav>
