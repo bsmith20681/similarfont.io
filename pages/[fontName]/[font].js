@@ -12,74 +12,85 @@ const ViewFont = () => {
 
   return (
     <Layout>
-      <div
-        className="container"
-        style={{ display: "flex", justifyContent: "center" }}
-      >
-        <div className="col-md-8">
-          <div className="row">
-            {filteredFonts.map((x, i) => {
-              return (
-                <div>
-                  <h1>
-                    {x.googleAlternatives.length} Google Font Alternatives to{" "}
-                    {x.fontName}
-                  </h1>
-                  <h2>{ReactHtmlParser(x.description)}</h2>
-                  <h2>
-                    Here are some google alternative fonts for {x.fontName}
-                  </h2>
-                  {x.googleAlternatives.map((font) => {
-                    const googleAltFont = DataBase.find(
-                      (item) => item.fontName === font
-                    );
+      <article>
+        <div className="title-background">
+          {filteredFonts.map((x) => {
+            return (
+              <h1 classname="title">
+                {x.googleAlternatives.length} Google Font Alternatives to{" "}
+                {x.fontName}
+              </h1>
+            );
+          })}
+        </div>
+        <div
+          className="container"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div className="col-md-8">
+            <div className="row">
+              {filteredFonts.map((x, i) => {
+                return (
+                  <div>
+                    <h2>{ReactHtmlParser(x.description)}</h2>
+                    <h2>
+                      Here are some google alternative fonts for {x.fontName}
+                    </h2>
+                    {x.googleAlternatives.map((font) => {
+                      const googleAltFont = DataBase.find(
+                        (item) => item.fontName === font
+                      );
 
-                    return (
-                      <ul>
-                        <li key={googleAltFont.id}>
-                          <img
-                            src={googleAltFont.fontImage}
-                            alt={googleAltFont.fontImageAlt}
-                          />
-                          <p>
-                            <strong>{googleAltFont.fontName}</strong>
-                          </p>
-                          <p>{ReactHtmlParser(googleAltFont.description)}</p>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                  <h2>
-                    Here are some free font alternatives from Font Squireel for{" "}
-                    {x.fontName}
-                  </h2>
-                  {x.fontSquirrelAlternatives.map((font) => {
-                    const fontSquirrelAltFont = DataBase.find(
-                      (item) => item.fontName === font
-                    );
-                    return (
-                      <ul>
-                        <li key={fontSquirrelAltFont.id}>
-                          <img
-                            src={fontSquirrelAltFont.fontImage}
-                            alt={fontSquirrelAltFont.fontImageAlt}
-                          />
-                          <p>
-                            <strong>{fontSquirrelAltFont.fontName}</strong>
-                          </p>
-                          <p>
-                            {ReactHtmlParser(fontSquirrelAltFont.description)}
-                          </p>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              );
-            })}
+                      return (
+                        <ul className="post-item_list">
+                          <li className="post-item" key={googleAltFont.id}>
+                            <img
+                              src={googleAltFont.fontImage}
+                              alt={googleAltFont.fontImageAlt}
+                            />
+                            <a href={googleAltFont.fontLink}>
+                              <strong>{googleAltFont.fontName}</strong>
+                            </a>
+                            <p>{ReactHtmlParser(googleAltFont.description)}</p>
+                          </li>
+                        </ul>
+                      );
+                    })}
+                    <h2>
+                      Here are some free font alternatives from Font Squireel
+                      for {x.fontName}
+                    </h2>
+                    {x.fontSquirrelAlternatives.map((font) => {
+                      const fontSquirrelAltFont = DataBase.find(
+                        (item) => item.fontName === font
+                      );
+                      return (
+                        <ul className="post-item_list">
+                          <li
+                            className="post-item"
+                            key={fontSquirrelAltFont.id}
+                          >
+                            <img
+                              src={fontSquirrelAltFont.fontImage}
+                              alt={fontSquirrelAltFont.fontImageAlt}
+                            />
+                            <p>
+                              <strong>{fontSquirrelAltFont.fontName}</strong>
+                            </p>
+                            <p>
+                              {ReactHtmlParser(fontSquirrelAltFont.description)}
+                            </p>
+                          </li>
+                        </ul>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      </article>
     </Layout>
   );
 };

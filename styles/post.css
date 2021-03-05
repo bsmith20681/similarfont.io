@@ -1,0 +1,23 @@
+.title-background {
+  width: 100%;
+  height: 25vh;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  max-width: 530px;
+  text-align: center;
+  color: #102a43;
+}
+
+.post-item {
+}
+
+.post-item_list {
+  list-style: none;
+  padding: 0;
+}
