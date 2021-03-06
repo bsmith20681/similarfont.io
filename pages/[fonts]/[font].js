@@ -45,7 +45,7 @@ const ViewFont = ({ singleFont }) => {
         <div className="title-background">
           {filteredFonts.map((x) => {
             return (
-              <h1 classname="title">
+              <h1 className="title">
                 {x.googleAlternatives.length} Google Font Alternatives to{" "}
                 {x.fontName}
               </h1>
