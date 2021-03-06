@@ -1,17 +1,20 @@
 import Layout from "../../components/Layout";
 import { useRouter } from "next/router";
 import ReactHtmlParser from "react-html-parser";
-import Image from "next/image";
 import DataBase from "../../data/database.json";
+import { NextSeo } from "next-seo";
 
 const ViewFont = () => {
   const router = useRouter();
   const { font } = router.query;
   const grabFontFromURL = `${font}`.split("-").pop();
   const filteredFonts = DataBase.filter((x) => x.fontName == grabFontFromURL);
+  const title = `Google Font Alternative for ${filteredFonts[0].fontName}`;
+  const description = `Here are ${filteredFonts[0].googleAlternatives.length} Google Font alternatives for ${filteredFonts[0].fontName} that are similar in nature. These fonts are free to use and would make a good replacement for a premium font.`;
 
   return (
     <Layout>
+      <NextSeo title={title} description={description} />
       <article>
         <div className="title-background">
           {filteredFonts.map((x) => {

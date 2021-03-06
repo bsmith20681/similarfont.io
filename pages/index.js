@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <Layout>
       <NextSeo
-        title="Home | similarfont.io"
-        description="This is the homepage"
+        title="Home | SimilarFont.io"
+        description="Easily find free font alternatives to 50+ premium fonts."
       />
 
       {console.log(filteredFontArray)}
@@ -32,7 +32,9 @@ const Home = () => {
               Easily Find <span style={{ color: "#7069fa" }}>Free</span>{" "}
               Alternatives to Premium Fonts
             </h1>
-            <p className="hero-subtitle">Find up to 50+ alternative fonts</p>
+            <p className="hero-subtitle">
+              Easily find free font alternatives to 50+ premium fonts.
+            </p>
           </div>
         </div>
       </div>
