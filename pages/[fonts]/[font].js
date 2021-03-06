@@ -3,8 +3,34 @@ import { useRouter } from "next/router";
 import ReactHtmlParser from "react-html-parser";
 import DataBase from "../../data/database.json";
 import { NextSeo } from "next-seo";
+import AuthorBox from "../../components/AuthorBox";
 
-const ViewFont = () => {
+export async function getStaticPaths() {
+  const data = DataBase;
+  const fontArray = data.filter(
+    (x) => x.googleFont === false && x.fontSquirrel === false
+  );
+
+  const paths = fontArray.map((font) => ({
+    params: {
+      fonts: font.fontName.toLowerCase(),
+      font: "google-font-alternative-to-" + font.fontName,
+    },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export const getStaticProps = async ({ params }) => {
+  const grabFontFromURL = `${params}`.split("-").pop();
+  const filteredFonts = DataBase.filter((x) => x.fontName == grabFontFromURL);
+
+  return {
+    props: { singleFont: filteredFonts },
+  };
+};
+
+const ViewFont = ({ singleFont }) => {
   const router = useRouter();
   const { font } = router.query;
   const grabFontFromURL = `${font}`.split("-").pop();
@@ -34,11 +60,9 @@ const ViewFont = () => {
             <div className="row">
               {filteredFonts.map((x, i) => {
                 return (
-                  <div>
+                  <div key={i}>
                     <h2>{ReactHtmlParser(x.description)}</h2>
-                    <h2>
-                      Here are some google alternative fonts for {x.fontName}
-                    </h2>
+                    <h2>Similar Google Fonts for {x.fontName}</h2>
                     {x.googleAlternatives.map((font) => {
                       const googleAltFont = DataBase.find(
                         (item) => item.fontName === font
@@ -46,7 +70,8 @@ const ViewFont = () => {
 
                       return (
                         <ul className="post-item_list">
-                          <li className="post-item" key={googleAltFont.id}>
+                          <li className="post-item">
+                            <img src={x.fontImage} alt={x.fontImageAlt} />
                             <img
                               src={googleAltFont.fontImage}
                               alt={googleAltFont.fontImageAlt}
@@ -59,27 +84,22 @@ const ViewFont = () => {
                         </ul>
                       );
                     })}
-                    <h2>
-                      Here are some free font alternatives from Font Squireel
-                      for {x.fontName}
-                    </h2>
+                    <h2>Similar Font Squirel fonts for {x.fontName}</h2>
                     {x.fontSquirrelAlternatives.map((font) => {
                       const fontSquirrelAltFont = DataBase.find(
                         (item) => item.fontName === font
                       );
                       return (
                         <ul className="post-item_list">
-                          <li
-                            className="post-item"
-                            key={fontSquirrelAltFont.id}
-                          >
+                          <li className="post-item">
+                            <img src={x.fontImage} alt={x.fontImageAlt} />
                             <img
                               src={fontSquirrelAltFont.fontImage}
                               alt={fontSquirrelAltFont.fontImageAlt}
                             />
-                            <p>
+                            <a>
                               <strong>{fontSquirrelAltFont.fontName}</strong>
-                            </p>
+                            </a>
                             <p>
                               {ReactHtmlParser(fontSquirrelAltFont.description)}
                             </p>
@@ -94,6 +114,8 @@ const ViewFont = () => {
           </div>
         </div>
       </article>
+      <AuthorBox />
+      <div style={{ marginTop: "20px", opacity: "0" }}>tes</div>
     </Layout>
   );
 };

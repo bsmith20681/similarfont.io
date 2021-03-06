@@ -5,15 +5,21 @@ import LinkBox from "../components/LinkBox";
 import SearchBar from "../components/SearchBar";
 import DataBase from "../data/database.json";
 import { useState } from "react";
+import Link from "next/link";
 
-const Home = () => {
-  const [search, setSearch] = useState("");
-
+export const getStaticProps = async () => {
   const fontArray = DataBase.filter(
     (x) => x.googleFont === false && x.fontSquirrel === false
   );
+  return {
+    props: { fonts: fontArray },
+  };
+};
 
-  const filteredFontArray = fontArray.filter((x) => {
+const Home = ({ fonts }) => {
+  const [search, setSearch] = useState("");
+
+  const filteredFontArray = fonts.filter((x) => {
     return x.fontName.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -24,7 +30,6 @@ const Home = () => {
         description="Easily find free font alternatives to 50+ premium fonts."
       />
 
-      {console.log(filteredFontArray)}
       <div className="container">
         <div className="row justify-content-center">
           <div>
@@ -55,7 +60,10 @@ const Home = () => {
               filteredFontArray.map((font, index) => {
                 return (
                   <LinkBox
-                    link={`/${font.fontName}/google-alternative-font-to-${font.fontName}`}
+                    key={index}
+                    link={`/${font.fontName.toLowerCase()}/google-font-alternative-to-${
+                      font.fontName
+                    }`}
                     font={font.fontName}
                     number={
                       font.googleAlternatives.length +

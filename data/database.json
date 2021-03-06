@@ -32,7 +32,7 @@
     "fontName": "Didact Gothic",
     "description": "<p>Didact Gothic is a sans-serif font created in 2017 by Alexei Vanyashin. It was designed to represent letters you would see in an elementary classroom. It only comes in one font weight. It is a fun, welcoming font that you would likely see in bodies of text. </p>",
     "fontLink": "https://fonts.google.com/specimen/Didact+Gothic?query=Didact+Gothic&preview.text_type=custom",
-    "fontImage": "/images/fontImages/futura.jpg",
+    "fontImage": "/images/fontImages/didact_gothic.jpg",
     "fontImageAlt": "Image of Didact Gothic",
     "serif": false,
     "tags": ["fun", "sans-serif"],
@@ -1152,20 +1152,7 @@
     "fontSquirrel": false,
     "fontSquirrelAlternatives": ["Khula"]
   },
-  {
-    "id": 80,
-    "fontName": "Copperplate",
-    "description": "<p>Copperplate is a is a serif font designed by Frederic Goudy near the late 1800s. It features small serifs that give it the feeling that someone used an engraving tool to create it. It was originally intended for letterheads and business cards, but the digital version helps use see this font being used in all kinds of digital designs.</p>",
-    "fontLink": "https://www.myfonts.com/fonts/urw/copperplate/",
-    "fontImage": "/images/fontImages/copperlate.jpg",
-    "fontImageAlt": "Image of Copperplate font",
-    "serif": true,
-    "tags": ["serif"],
-    "googleFont": false,
-    "googleAlternatives": ["Alegreya SC"],
-    "fontSquirrel": false,
-    "fontSquirrelAlternatives": [""]
-  },
+
   {
     "id": 81,
     "fontName": "Alegreya SC",
@@ -1572,20 +1559,7 @@
     "fontSquirrel": false,
     "fontSquirrelAlternatives": ["Catamaran"]
   },
-  {
-    "id": 110,
-    "fontName": "FF Mark",
-    "description": "<p>FF Mark is a sans-serif font created in 2013. It was created for branding, film, TV, advertising, and packaging. It is an easy to read font that works great for body text. </p>",
-    "fontLink": "https://www.myfonts.com/fonts/fontfont/mark/",
-    "fontImage": "/images/fontImages/ff_mark.jpg",
-    "fontImageAlt": "Image of ff mark font",
-    "serif": false,
-    "tags": ["sans-serif"],
-    "googleFont": false,
-    "googleAlternatives": ["Mulish", "Varela", "Rubik"],
-    "fontSquirrel": false,
-    "fontSquirrelAlternatives": ["Catamaran"]
-  },
+
   {
     "id": 111,
     "fontName": "Univers",

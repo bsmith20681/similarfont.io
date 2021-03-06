@@ -1,0 +1,14 @@
+.authorBox {
+  background-color: #f0f4f8;
+  max-width: 740px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.authorBox-image {
+  width: 160px;
+  padding-right: 15px;
+}

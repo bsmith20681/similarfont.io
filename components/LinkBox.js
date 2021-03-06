@@ -3,26 +3,15 @@ const shortid = require("shortid");
 
 const LinkBox = (props) => {
   return (
-    <div
-      className="col-md-4"
-      style={{ marginBottom: "20px" }}
-      key={shortid.generate()}
-    >
-      <Link href={props.link} key={shortid.generate()}>
-        <a key={shortid.generate()}>
-          {" "}
-          <div className="linkBox" key={shortid.generate()}>
-            <h2 className="linkBox-title" key={shortid.generate()}>
-              {props.font}
-            </h2>
-            <p key={shortid.generate()}>
-              {props.number} free fonts similar to {props.font}
-            </p>
-            <a href="#" key={shortid.generate()}>
-              See Alternatives
-            </a>
-          </div>
-        </a>
+    <div key={props.id} className="col-md-4" style={{ marginBottom: "20px" }}>
+      <Link href={props.link}>
+        <div className="linkBox">
+          <h2 className="linkBox-title">{props.font}</h2>
+          <p>
+            {props.number} free fonts similar to {props.font}
+          </p>
+          <a href="#">See Alternatives</a>
+        </div>
       </Link>
     </div>
   );
