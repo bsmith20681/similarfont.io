@@ -34,3 +34,8 @@
 .post-item_header:hover {
   color: #7069fa;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

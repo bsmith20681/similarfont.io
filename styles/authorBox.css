@@ -9,6 +9,6 @@
 }
 
 .authorBox-image {
-  width: 160px;
+  max-width: 150px;
   padding-right: 15px;
 }

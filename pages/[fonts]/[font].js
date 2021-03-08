@@ -4,6 +4,7 @@ import ReactHtmlParser from "react-html-parser";
 import DataBase from "../../data/database.json";
 import { NextSeo } from "next-seo";
 import AuthorBox from "../../components/AuthorBox";
+import React from "react";
 
 export async function getStaticPaths() {
   const data = DataBase;
@@ -60,7 +61,7 @@ const ViewFont = ({ singleFont }) => {
             <div className="row">
               {filteredFonts.map((x, i) => {
                 return (
-                  <div key={i}>
+                  <React.Fragment key={i}>
                     <h2>{ReactHtmlParser(x.description)}</h2>
                     <h2>Similar Google Fonts for {x.fontName}</h2>
                     {x.googleAlternatives.map((font) => {
@@ -71,8 +72,13 @@ const ViewFont = ({ singleFont }) => {
                       return (
                         <ul className="post-item_list">
                           <li className="post-item">
-                            <img src={x.fontImage} alt={x.fontImageAlt} />
                             <img
+                              className="img-fluid"
+                              src={x.fontImage}
+                              alt={x.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
                               src={googleAltFont.fontImage}
                               alt={googleAltFont.fontImageAlt}
                             />
@@ -95,8 +101,13 @@ const ViewFont = ({ singleFont }) => {
                       return (
                         <ul className="post-item_list">
                           <li className="post-item">
-                            <img src={x.fontImage} alt={x.fontImageAlt} />
                             <img
+                              className="img-fluid"
+                              src={x.fontImage}
+                              alt={x.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
                               src={fontSquirrelAltFont.fontImage}
                               alt={fontSquirrelAltFont.fontImageAlt}
                             />
@@ -113,7 +124,7 @@ const ViewFont = ({ singleFont }) => {
                         </ul>
                       );
                     })}
-                  </div>
+                  </React.Fragment>
                 );
               })}
             </div>

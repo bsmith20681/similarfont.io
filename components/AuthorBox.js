@@ -2,7 +2,7 @@ const AuthorBox = () => {
   return (
     <div className="authorBox ">
       <img
-        className="authorBox-image"
+        className="authorBox-image img-fluid"
         src="/images/self-portrait-sm.jpg"
         alt="picture of ben smith"
       />
