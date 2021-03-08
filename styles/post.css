@@ -14,10 +14,23 @@
   color: #102a43;
 }
 
-.post-item {
-}
-
 .post-item_list {
   list-style: none;
   padding: 0;
+}
+
+.post-item_header {
+  font-size: 1.5rem;
+  display: block;
+  padding-left: 20px;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 0;
+}
+
+.post-item_header:hover {
+  color: #7069fa;
 }

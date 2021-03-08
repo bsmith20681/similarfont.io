@@ -19,7 +19,7 @@ const Header = (props) => {
           </h3>
           <ul className={"nav-link-list " + (mobileMenu ? "open" : "")}>
             <li className="nav-link">
-              <a href="">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className="nav-link">
               <a href="">About Us</a>

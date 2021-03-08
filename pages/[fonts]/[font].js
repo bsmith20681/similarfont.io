@@ -76,7 +76,10 @@ const ViewFont = ({ singleFont }) => {
                               src={googleAltFont.fontImage}
                               alt={googleAltFont.fontImageAlt}
                             />
-                            <a href={googleAltFont.fontLink}>
+                            <a
+                              className="post-item_header"
+                              href={googleAltFont.fontLink}
+                            >
                               <strong>{googleAltFont.fontName}</strong>
                             </a>
                             <p>{ReactHtmlParser(googleAltFont.description)}</p>
@@ -97,7 +100,10 @@ const ViewFont = ({ singleFont }) => {
                               src={fontSquirrelAltFont.fontImage}
                               alt={fontSquirrelAltFont.fontImageAlt}
                             />
-                            <a>
+                            <a
+                              className="post-item_header"
+                              href={fontSquirrelAltFont.fontLink}
+                            >
                               <strong>{fontSquirrelAltFont.fontName}</strong>
                             </a>
                             <p>
