@@ -3,8 +3,8 @@ const path = require("path");
 
 sitemap({
   baseUrl: "similarfont.io",
-  pagesDirectory: path.resolve(__dirname, "../build/server/pages/"),
-  targetDirectory: path.resolve(__dirname, "../build/server/pages/"),
+  pagesDirectory: path.resolve(__dirname, "../.next/server/pages/"),
+  targetDirectory: path.resolve(__dirname, "../.next/server/pages/"),
   ignordedExtensions: [
     "js",
     "map",
