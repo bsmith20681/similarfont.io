@@ -132,6 +132,7 @@ const ViewFont = ({ singleFont }) => {
         </div>
       </article>
       <AuthorBox />
+
       <div style={{ marginTop: "20px", opacity: "0" }}>tes</div>
     </Layout>
   );

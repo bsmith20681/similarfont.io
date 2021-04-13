@@ -1,11 +1,12 @@
 const AuthorBox = () => {
   return (
-    <div className="authorBox ">
+    <div className="authorBox">
       <img
         className="authorBox-image img-fluid"
         src="/images/self-portrait-sm.jpg"
         alt="picture of ben smith"
       />
+
       <div>
         <p>
           <strong>About the Author</strong>

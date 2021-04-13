@@ -12,3 +12,9 @@
   max-width: 150px;
   padding-right: 15px;
 }
+
+@media only screen and (max-width: 678px) {
+  .authorBox {
+    display: block;
+  }
+}
