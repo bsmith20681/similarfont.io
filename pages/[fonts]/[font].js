@@ -62,7 +62,7 @@ const ViewFont = ({ singleFont }) => {
               {filteredFonts.map((x, i) => {
                 return (
                   <React.Fragment key={i}>
-                    <h2>{ReactHtmlParser(x.description)}</h2>
+                    {ReactHtmlParser(x.description)}
                     <h2>Similar Google Fonts for {x.fontName}</h2>
                     {x.googleAlternatives.map((font) => {
                       const googleAltFont = DataBase.find(
@@ -88,7 +88,7 @@ const ViewFont = ({ singleFont }) => {
                             >
                               <strong>{googleAltFont.fontName}</strong>
                             </a>
-                            <p>{ReactHtmlParser(googleAltFont.description)}</p>
+                            {ReactHtmlParser(googleAltFont.description)}
                           </li>
                         </ul>
                       );
@@ -117,9 +117,8 @@ const ViewFont = ({ singleFont }) => {
                             >
                               <strong>{fontSquirrelAltFont.fontName}</strong>
                             </a>
-                            <p>
-                              {ReactHtmlParser(fontSquirrelAltFont.description)}
-                            </p>
+
+                            {ReactHtmlParser(fontSquirrelAltFont.description)}
                           </li>
                         </ul>
                       );
@@ -132,8 +131,6 @@ const ViewFont = ({ singleFont }) => {
         </div>
       </article>
       <AuthorBox />
-
-      <div style={{ marginTop: "20px", opacity: "0" }}>tes</div>
     </Layout>
   );
 };

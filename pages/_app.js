@@ -11,6 +11,7 @@ import "../styles/home-page.css";
 import "../styles/message.css";
 import "../styles/button.css";
 import "../styles/post.css";
+import "../styles/about.css";
 import "../styles/authorBox.css";
 import "../styles/bootstrap-reboot.scss";
 

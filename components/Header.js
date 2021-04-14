@@ -5,9 +5,9 @@ const Header = (props) => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = (e) => setMobileMenu(!mobileMenu);
   return (
-    <>
+    <header>
       <div id="purpleBar"></div>
-      <header className="container">
+      <div className="container">
         {/* Actual Menu*/}
         <nav>
           <h3>
@@ -22,7 +22,7 @@ const Header = (props) => {
               <Link href="/">Home</Link>
             </li>
             <li className="nav-link">
-              <a href="">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <li className="nav-link">
               <Link href="/submit-font">Submit a Font</Link>
@@ -44,8 +44,8 @@ const Header = (props) => {
           <div></div>
         </div>
         <a href="#" id={mobileMenu ? "overlay" : ""} onClick={toggleMenu}></a>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 
