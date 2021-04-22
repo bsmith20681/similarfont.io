@@ -74,12 +74,22 @@ const ViewFont = ({ singleFont }) => {
                           <li className="post-item">
                             <img
                               className="img-fluid"
-                              src={x.fontImage}
+                              src={x.fontImageSentence}
                               alt={x.fontImageAlt}
                             />
                             <img
                               className="img-fluid"
-                              src={googleAltFont.fontImage}
+                              src={googleAltFont.fontImageSentence}
+                              alt={googleAltFont.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
+                              src={x.fontImageAlphabet}
+                              alt={x.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
+                              src={googleAltFont.fontImageAlphabet}
                               alt={googleAltFont.fontImageAlt}
                             />
                             <a
@@ -103,12 +113,22 @@ const ViewFont = ({ singleFont }) => {
                           <li className="post-item">
                             <img
                               className="img-fluid"
-                              src={x.fontImage}
+                              src={x.fontImageSentence}
                               alt={x.fontImageAlt}
                             />
                             <img
                               className="img-fluid"
-                              src={fontSquirrelAltFont.fontImage}
+                              src={fontSquirrelAltFont.fontImageSentence}
+                              alt={fontSquirrelAltFont.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
+                              src={x.fontImageAlphabet}
+                              alt={x.fontImageAlt}
+                            />
+                            <img
+                              className="img-fluid"
+                              src={fontSquirrelAltFont.fontImageAlphabet}
                               alt={fontSquirrelAltFont.fontImageAlt}
                             />
                             <a

@@ -10,7 +10,7 @@ const LinkBox = (props) => {
           <p>
             {props.number} free fonts similar to {props.font}
           </p>
-          <a href="#">See Alternatives</a>
+          <Link href={props.link}>See Alternatives</Link>
         </div>
       </Link>
     </div>
