@@ -8,11 +8,6 @@ import Layout from "../components/Layout";
 import AuthorBox from "../components/AuthorBox";
 
 const Post = ({ data }) => {
-  //using router.isFallback because data is returning as undefined for a short second then it will populate the data thus throwing an error
-  const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
   const { title, body, metaTitle, metaDescription } = data;
 
   return (
@@ -70,12 +65,5 @@ export async function getStaticProps({ params }) {
     props: { data: singlePostObject },
   };
 }
-
-/*
-Post.getInitialProps = async function (context) {
-  const { slug = "" } = context.query;
-  return await client.fetch(query, { slug });
-};
-*/
 
 export default Post;
