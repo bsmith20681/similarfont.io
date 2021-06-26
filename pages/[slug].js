@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import groq from "groq";
 import { useRouter } from "next/router";
@@ -8,6 +8,15 @@ import Layout from "../components/Layout";
 import AuthorBox from "../components/AuthorBox";
 
 const Post = ({ data }) => {
+  useEffect(() => {
+    const { pathname } = Router;
+    switch (pathname) {
+      case "/futura/google-font-alternative-to-Futura":
+        Router.push("/3-google-fonts-similar-to-futura");
+        break;
+    }
+  });
+
   const { title, body, metaTitle, metaDescription } = data;
 
   return (
