@@ -19,6 +19,6 @@ sitemap({
     "icon",
   ],
   */
-  ignoredPaths: ["404", "favicon", "index"],
+  ignoredPaths: ["404", "favicon", "index", "[slug]"],
   extraPaths: ["/"],
 });

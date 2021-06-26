@@ -21,6 +21,7 @@ const Home = (props) => {
         title="Home | SimilarFont.io"
         description="Easily find free font alternatives to 50+ premium fonts."
       />
+      {console.log(posts)}
 
       <div className="container">
         <div className="row justify-content-center">

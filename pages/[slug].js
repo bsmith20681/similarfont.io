@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import groq from "groq";
-import { useRouter } from "next/router";
+
 import { NextSeo } from "next-seo";
 import client from "../client";
 import Layout from "../components/Layout";
@@ -37,6 +37,8 @@ export async function getStaticPaths() {
     '*[_type == "post"]{slug}|order(publishedAt desc)'
   );
 
+  console.log(fetchAllPosts);
+
   //maping over array of posts because groq isn't allowing me to pull just the slug from the slug object must be a bug from sanity
   const pullSlugsFromPosts = fetchAllPosts.map((post) => post.slug.current);
 
@@ -53,6 +55,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  console.log(params);
   const slug = params.slug;
   const allPosts = await client.fetch(
     '*[_type == "post"]|order(publishedAt desc)'
@@ -60,7 +63,7 @@ export async function getStaticProps({ params }) {
 
   const singlePost = allPosts.filter((post) => post.slug.current === slug);
   const singlePostObject = { ...singlePost[0] }; //singlePost returns an array with only item, converting into object to be used through article
-  console.log(`Building slug: ${slug}`);
+
   return {
     props: { data: singlePostObject },
   };
