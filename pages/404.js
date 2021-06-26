@@ -1,4 +1,6 @@
+import { faUnderline } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
+import Layout from "../components/Layout";
 
 export default function Custom404() {
   const router = useRouter();
@@ -173,5 +175,21 @@ export default function Custom404() {
       break;
   }
 
-  return <h1>404 - Page Not Found</h1>;
+  return (
+    <Layout>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1>We are updating our links currently</h1>
+        <a href="/" style={{ textDecoration: "underline" }}>
+          Click Here to go to homepage and search for a font
+        </a>
+      </div>
+    </Layout>
+  );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import groq from "groq";
-
 import { NextSeo } from "next-seo";
 import client from "../client";
 import Layout from "../components/Layout";
