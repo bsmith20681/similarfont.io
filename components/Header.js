@@ -11,15 +11,14 @@ const Header = (props) => {
         {/* Actual Menu*/}
         <nav>
           <h3>
-            <Link href="/">
-              <a className="nav-logo">
-                Similar<span style={{ color: "#7069fa" }}>Font</span>.io
-              </a>
-            </Link>
+            {/*purposfully using <a> instead of <Link> because when hosted on netlify weird bug returns An unexpected error has occurred. only for "/" route */}
+            <a className="nav-logo" href="/">
+              Similar<span style={{ color: "#7069fa" }}>Font</span>.io
+            </a>
           </h3>
           <ul className={"nav-link-list " + (mobileMenu ? "open" : "")}>
             <li className="nav-link">
-              <Link href="/">Home</Link>
+              <a href="/">Home</a>
             </li>
             <li className="nav-link">
               <Link href="/about">About Us</Link>
