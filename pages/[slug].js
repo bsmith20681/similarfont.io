@@ -8,15 +8,6 @@ import Layout from "../components/Layout";
 import AuthorBox from "../components/AuthorBox";
 
 const Post = ({ data }) => {
-  useEffect(() => {
-    const { pathname } = Router;
-    switch (pathname) {
-      case "/futura/google-font-alternative-to-Futura":
-        Router.push("/3-google-fonts-similar-to-futura");
-        break;
-    }
-  });
-
   const { title, body, metaTitle, metaDescription } = data;
 
   return (
