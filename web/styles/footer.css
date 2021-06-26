@@ -1,0 +1,12 @@
+.footer {
+  background-color: #f0f4f8;
+  color: #102a43;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-line {
+  height: 1px;
+  border-radius: 30px;
+  background-color: #102a43;
+}

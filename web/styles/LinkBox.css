@@ -1,0 +1,40 @@
+.linkBox {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 24px;
+  background-color: white;
+  color: #102a43;
+  height: 100%;
+}
+
+.linkBox:hover {
+  transform: translateY(-5px);
+  transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.linkBox a {
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.linkBox:hover a {
+  color: #7069fa;
+}
+
+.linkBox-title {
+  font-size: 1.5rem;
+}
+
+.linkBox-content {
+  position: relative;
+  height: 100%;
+  background-color: #f0f4f8;
+}
