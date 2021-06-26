@@ -3,23 +3,15 @@ import Message from "../components/Message";
 import Layout from "../components/Layout";
 import LinkBox from "../components/LinkBox";
 import SearchBar from "../components/SearchBar";
-import DataBase from "../data/database.json";
 import { useState } from "react";
-import Link from "next/link";
+import groq from "groq";
+import client from "../client";
 
-export const getStaticProps = async () => {
-  const fontArray = DataBase.filter(
-    (x) => x.googleFont === false && x.fontSquirrel === false
-  );
-  return {
-    props: { fonts: fontArray },
-  };
-};
-
-const Home = ({ fonts }) => {
+const Home = (props) => {
   const [search, setSearch] = useState("");
+  const { posts = [] } = props;
 
-  const filteredFontArray = fonts.filter((x) => {
+  const filteredPosts = posts.filter((x) => {
     return x.fontName.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -46,32 +38,23 @@ const Home = ({ fonts }) => {
 
       <div className="linkBox-content">
         <SearchBar value={search} change={(e) => setSearch(e.target.value)} />
-
         <div className="container" style={{ minHeight: "83vh" }}>
           <div
             className="row justify-content-center"
             style={{ marginBottom: "48px" }}
           ></div>
           <div className="row">
-            {}
-            {filteredFontArray.length === 0 ? (
+            {filteredPosts.length === 0 ? (
               <Message message="😨Can't find the font you are looking for? Send it to us and we will put in our database later." />
             ) : (
-              filteredFontArray.map((font, index) => {
-                return (
-                  <LinkBox
-                    key={index}
-                    link={`/${font.fontName.toLowerCase()}/google-font-alternative-to-${
-                      font.fontName
-                    }`}
-                    font={font.fontName}
-                    number={
-                      font.googleAlternatives.length +
-                      font.fontSquirrelAlternatives.length
-                    }
-                  />
-                );
-              })
+              filteredPosts.map((font, index) => (
+                <LinkBox
+                  key={index}
+                  link={font.slug.current}
+                  font={font.fontName}
+                  number={font.title}
+                />
+              ))
             )}
           </div>
         </div>
@@ -79,5 +62,11 @@ const Home = ({ fonts }) => {
     </Layout>
   );
 };
+
+Home.getInitialProps = async () => ({
+  posts: await client.fetch(groq`
+    *[_type == "post"]|order(publishedAt desc)
+  `),
+});
 
 export default Home;

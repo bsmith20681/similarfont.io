@@ -3737,4 +3737,8 @@ html {
     margin-left: auto !important;
   }
 }
+
+.margin-center-content {
+  margin: 0 auto;
+}
 /*# sourceMappingURL=bootstrap-grid.min.css.map */
