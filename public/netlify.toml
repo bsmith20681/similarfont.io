@@ -2,7 +2,12 @@
   publish = "out/" 
   command = "npm run export" 
 [[redirects]]
-  from = "/gilroy/google-font-alternative-to-Gilroy"
-  to = "/2-google-fonts-similar-to-gilroy"
+  from = "https://similarfont.io/gilroy/google-font-alternative-to-Gilroy"
+  to = "https://similarfont.io/2-google-fonts-similar-to-gilroy"
+  status = 301
+  force = true
+
+  from = "https://similarfont.io/futura/google-font-alternative-to-Futura"
+  to = "https://similarfont.io/3-google-fonts-similar-to-futura"
   status = 301
   force = true
