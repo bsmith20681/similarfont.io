@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   //using router.isFallback because data is returning as undefined for a short second then it will populate the data thus throwing an error
   const router = useRouter();
   if (router.isFallback) {
-    return <h3>loading...</h3>;
+    return <div>Loading...</div>;
   }
   const { title, body, metaTitle, metaDescription } = data;
 
@@ -53,7 +53,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -65,7 +65,7 @@ export async function getStaticProps({ params }) {
 
   const singlePost = allPosts.filter((post) => post.slug.current === slug);
   const singlePostObject = { ...singlePost[0] }; //singlePost returns an array with only item, converting into object to be used through article
-
+  console.log(`Building slug: ${slug}`);
   return {
     props: { data: singlePostObject },
   };
