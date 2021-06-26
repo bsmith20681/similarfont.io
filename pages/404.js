@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 export default function Custom404() {
   const router = useRouter();
 
-  switch (router.asPath) {
+  switch (router.asPath || location.pathname) {
     case "/futura/google-font-alternative-to-Futura":
       router.push("/3-google-fonts-similar-to-futura");
       break;
