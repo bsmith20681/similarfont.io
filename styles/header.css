@@ -1,7 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .nav-logo {
@@ -117,10 +117,38 @@ nav {
   #hamburger {
     display: block;
   }
+
+  #figmaLinkBadge {
+    position: absolute;
+    right: 60px !important;
+    top: 0px !important;
+    transform: rotate(0deg) !important;
+    background-color: #f03c3c;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 4px;
+  }
 }
 
 #purpleBar {
   width: 100%;
   height: 10px;
   background-color: #7069fa;
+}
+
+#figmaLink {
+  position: relative;
+}
+
+#figmaLinkBadge {
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  transform: rotate(45deg);
+  background-color: #f03c3c;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 2px 4px;
 }

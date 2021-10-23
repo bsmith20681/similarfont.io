@@ -26,6 +26,10 @@ const Header = (props) => {
             <li className="nav-link">
               <Link href="/submit-font">Submit a Font</Link>
             </li>
+            <li className="nav-link" id="figmaLink">
+              <div id="figmaLinkBadge">New</div>
+              <Link href="https://gumroad.com/a/167875699/NHefI">Figma UI Kit</Link>
+            </li>
           </ul>
         </nav>
         {/*Mobile Menu Utilities*/}
@@ -34,11 +38,7 @@ const Header = (props) => {
           <div></div>
           <div></div>
         </div>
-        <div
-          id="close-menu"
-          className={mobileMenu ? "open" : ""}
-          onClick={toggleMenu}
-        >
+        <div id="close-menu" className={mobileMenu ? "open" : ""} onClick={toggleMenu}>
           <div></div>
           <div></div>
         </div>

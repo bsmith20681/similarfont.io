@@ -18,11 +18,7 @@ const Post = ({ data }) => {
         </div>
         <div className="container">
           <div className="col-md-8 margin-center-content">
-            <BlockContent
-              blocks={body}
-              imageOptions={{ w: 800, h: 240, fit: "max" }}
-              {...client.config()}
-            />
+            <BlockContent blocks={body} imageOptions={{ w: 800, h: 240, fit: "max" }} {...client.config()} />
           </div>
         </div>
       </article>
@@ -32,11 +28,9 @@ const Post = ({ data }) => {
 };
 
 export async function getStaticPaths() {
-  const fetchAllPosts = await client.fetch(
-    '*[_type == "post"]{slug}|order(publishedAt desc)'
-  );
+  const fetchAllPosts = await client.fetch('*[_type == "post"]{slug}|order(publishedAt desc)');
 
-  console.log(fetchAllPosts);
+  //console.log(fetchAllPosts);
 
   //maping over array of posts because groq isn't allowing me to pull just the slug from the slug object must be a bug from sanity
   const pullSlugsFromPosts = fetchAllPosts.map((post) => post.slug.current);
@@ -54,11 +48,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params);
+  //console.log(params);
   const slug = params.slug;
-  const allPosts = await client.fetch(
-    '*[_type == "post"]|order(publishedAt desc)'
-  );
+  const allPosts = await client.fetch('*[_type == "post"]|order(publishedAt desc)');
 
   const singlePost = allPosts.filter((post) => post.slug.current === slug);
   const singlePostObject = { ...singlePost[0] }; //singlePost returns an array with only item, converting into object to be used through article
