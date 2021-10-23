@@ -8,6 +8,7 @@ import AuthorBox from "../components/AuthorBox";
 
 const Post = ({ data }) => {
   const { title, body, metaTitle, metaDescription } = data;
+  console.log(data);
 
   return (
     <Layout>
@@ -18,7 +19,13 @@ const Post = ({ data }) => {
         </div>
         <div className="container">
           <div className="col-md-8 margin-center-content">
+            <a href="https://gumroad.com/a/167875699/NHefI">
+              <img className="img-fluid" src="/images/banner-2.png" alt="figma ultimate ui kit" />
+            </a>
             <BlockContent blocks={body} imageOptions={{ w: 800, h: 240, fit: "max" }} {...client.config()} />
+            <a href="https://gumroad.com/a/167875699/NHefI">
+              <img className="img-fluid" src="/images/banner-4.png" alt="figma ultimate ui kit" />
+            </a>
           </div>
         </div>
       </article>
@@ -48,7 +55,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  //console.log(params);
+  console.log(params);
   const slug = params.slug;
   const allPosts = await client.fetch('*[_type == "post"]|order(publishedAt desc)');
 
