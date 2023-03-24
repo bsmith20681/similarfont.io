@@ -1,5 +1,5 @@
-## similarfont.io
+## SimilarFont.io
 
-this is the start. Run npm run dev to get started
+Similarfont.io is a blog that helps visitors find free font alternatives to premium fonts. It is a static site build with Next.js and the content is hosted with Sanity CMS.
 
 
